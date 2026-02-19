@@ -238,7 +238,7 @@
             </div>
 
             <div class="form-group">
-                <select id="servicio" required>
+                <select id="servicioSeleccionado" required>
                     <option value="">Seleccione el servicio</option>
                     <option>Car Wash & Detailling</option>
                     <option>Restauración de Silvines</option>
@@ -387,7 +387,7 @@
         const nombre = document.getElementById("nombre").value.trim();
         const apellido = document.getElementById("apellido").value.trim();
         const telefono = document.getElementById("telefono").value.trim();
-        const servicio = document.getElementById("servicio").value;
+        const servicio = document.getElementById("servicioSeleccionado").value;
 
         if (!nombre || !apellido || !telefono || !servicio) {
             alert("Por favor complete todos los campos.");
