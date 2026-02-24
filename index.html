@@ -121,25 +121,11 @@
 
 
             <!-- Ubicacion desplegable con maps o waze -->
-            <li class="mapa-menu">
-                <a href="#" onclick="toggleMapaMenu(); return false;">
+            <li>
+                <a href="https://maps.google.com/?q=13.6929,-89.2182">
                     <i class="fa-solid fa-location-dot"></i>
                     Ubicación
                 </a>
-
-                <div class="mapa-opciones">
-
-                    <a href="https://maps.app.goo.gl/CsEJGUzgfUCaw8Go9"
-                       target="_blank">
-                        📍 Google Maps
-                    </a>
-
-                    <a href="https://waze.com/ul/hd42r3vffr"
-                       target="_blank">
-                        🚗 Waze
-                    </a>
-
-                </div>
             </li>
 
         </ul>
@@ -595,16 +581,6 @@
 <script>
     function volverInicio() {
         window.location.href = window.location.pathname;
-    }
-</script>
-<!-- Mapa desplegable -->
-<script>
-    function toggleMapaMenu() {
-
-        let menu = document.querySelector(".mapa-opciones");
-
-        menu.classList.toggle("activo");
-
     }
 </script>
 </body>
