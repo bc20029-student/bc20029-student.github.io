@@ -3,585 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BL Car Center</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-
+    <title>BL Car Center | Enderezado, Pintura e Importación de Vehículos</title>
+    <!-- Fuente moderna Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
 
-<!-- HERO -->
-<header class="hero">
-
-    <div class="hero-overlay"></div>
-
-    <!-- NAVBAR -->
+    <!-- NAVBAR CON LOGO INTEGRADO -->
     <nav class="navbar">
-
-        <!-- Botón hamburguesa -->
-        <button class="menu-toggle" aria-label="Abrir menú">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="#top">
-                    <i class="fa-solid fa-house"></i>
-                    Inicio
-                </a>
-            </li>
-
-            <!-- SERVICIOS -->
-            <li class="mega-menu">
-                <button class="mega-btn" type="button">
-                    <i class="fa-solid fa-wrench"></i>
-                    Servicios ▾
-                </button>
-
-                <div class="mega-content">
-
-                    <a href="?servicio=carwash" class="mega-card">
-                        <img src="imagenes/lavado.png" alt="Car Wash & Detailling">
-                        <span>Car Wash & Detailling</span>
-                    </a>
-
-                    <a href="?servicio=silvines" class="mega-card">
-                        <img src="imagenes/Rsilvines.png" alt="Restauración de Silvines">
-                        <span>Restauración de Silvines</span>
-                    </a>
-
-                    <a href="?servicio=pintura" class="mega-card">
-                        <img src="imagenes/eypPrueba.jpg" alt="Restauración de Pintura">
-                        <span>Restauración de Pintura</span>
-                    </a>
-
-                    <a href="?servicio=tapiceria" class="mega-card">
-                        <img src="imagenes/tapiceria.png" alt="Limpieza de Tapicería">
-                        <span>Limpieza de Tapicería</span>
-                    </a>
-
-                    <a href="?servicio=motor" class="mega-card">
-                        <img src="imagenes/Lavado de motor.jpg" alt="Lavado de Motores y Chasis">
-                        <span>Lavado de Motores y Chasis</span>
-                    </a>
-
-                    <a href="?servicio=mecanica" class="mega-card">
-                        <img src="imagenes/mecanicaprueba.png" alt="Mecánica Express">
-                        <span>Mecánica Express</span>
-                    </a>
-
-                    <a href="?servicio=aceite" class="mega-card">
-                        <img src="imagenes/cambioaceite.png" alt="Cambio de Aceite">
-                        <span>Cambio de Aceite</span>
-                    </a>
-
-                    <a href="?servicio=ac" class="mega-card">
-                        <img src="imagenes/digAC.jpg" alt="Diagnóstico A/C">
-                        <span>Diagnóstico A/C</span>
-                    </a>
-
-                    <a href="?servicio=enderezado" class="mega-card">
-                        <img src="imagenes/eyp22.jpg" alt="Enderezado y Pintura">
-                        <span>Enderezado y Pintura</span>
-                    </a>
-
-                    <a href="?servicio=frenos" class="mega-card">
-                        <img src="imagenes/sfrenos.jpg" alt="Sistema de Frenos">
-                        <span>Sistema de Frenos</span>
-                    </a>
-
-                </div>
-            </li>
-
-            <li>
-                <a href="#nuestro-trabajo">
-                    <i class="fa-solid fa-camera"></i>
-                    Nuestro trabajo
-                </a>
-            </li>
-
-            <li>
-                <a href="#cotizacion" title="Cotizar">
-                    <i class="fa-solid fa-hand-holding-dollar"></i>
-                    Cotiza Ahora
-                </a>
-            </li>
-
-            <li>
-                <a href="#catalogo">
-                    <i class="fa-solid fa-car"></i>
-                    Catálogo
-                </a>
-            </li>
-
-
-            <!-- Ubicacion desplegable con maps o waze -->
-            <li>
-            <a href="https://maps.google.com/?q=13.962472,-89.567611">
-                <i class="fa-solid fa-location-dot"></i>
-                Ubicación
+        <div class="nav-container">
+            <a href="#top" class="logo">
+                <img src="imagenes/fpblc.jpg" alt="BL Car Center Logo">
+                <div class="logo-text">BL <span>CAR CENTER</span></div>
             </a>
-        </li>
 
-        </ul>
-    </nav>
-
-    <!-- CONTENIDO HERO -->
-    <div class="hero-content">
-        <h1 id="hero-titulo">BL Car Center
-        </h1>
-        <p id="hero-descripcion">
-            Importacion y alquiler de Vehiculos.
-            <br>
-            Car Wash - Enderezado - Pintura - Mecanica Express            </p>
-
-        <button id="btn-inicio" class="btn-inicio" onclick="volverInicio()" style="display:none;">
-            ← Volver al inicio
-        </button>
-
-
-    </div>
-
-</header>
-
-<!-- SECCIÓN SERVICIO (PLANTILLA) -->
-<section id="servicio" class="container" style="display:none;">
-
-    <h2 id="servicio-titulo">Servicio</h2>
-
-    <p id="servicio-descripcion">
-        <!-- Descripción del servicio -->
-    </p>
-
-    <div class="gallery" id="servicio-galeria">
-        <!-- Aquí irán imágenes o videos -->
-    </div>
-
-</section>
-
-
-<!-- SECCIÓN TRABAJOS -->
-<section id="nuestro-trabajo" class="container">
-    <h2 id="trabajo-titulo">Conozca nuestro trabajo</h2>
-
-    <div class="gallery" id="trabajo-galeria">
-
-        <div>
-            <video autoplay loop muted playsinline>
-                <source src="videos/Carwash.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div>
-            <video autoplay loop muted playsinline>
-                <source src="videos/WhatsApp Video 2026-01-07 at 5.08.45 PM.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div>
-            <video autoplay loop muted playsinline>
-                <source src="videos/WhatsApp Video 2026-01-07 at 5.09.25 PM.mp4" type="video/mp4">
-            </video>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- SECCIÓN COTIZACIÓN -->
-<section id="cotizacion" class="cotizacion">
-
-    <div class="cotizacion-overlay"></div>
-
-    <div class="cotizacion-content">
-
-        <h2>Solicita tu cotización</h2>
-        <p>Contactanos directamente por WhatsApp.</p>
-
-        <form class="cotizacion-form" id="cotizacionForm" onsubmit="enviarWhatsApp(event)">
-
-            <div class="form-group">
-                <input
-                        type="text"
-                        id="nombre"
-                        placeholder="Nombre"
-                        maxlength="20"
-                        pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
-                        required
-                >
-            </div>
-            <div class="form-group">
-
-                <input
-                        type="text"
-                        id="apellido"
-                        placeholder="Apellido"
-                        maxlength="20"
-                        pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
-                        required
-                >
-            </div>
-
-            <div class="form-group">
-                <input
-                        type="tel"
-                        id="telefono"
-                        placeholder="Número de teléfono"
-                        pattern="[0-9]+"
-                        inputmode="numeric"
-                        required
-                >
-            </div>
-
-            <div class="form-group">
-                <select id="servicioSeleccionado" required>
-                    <option value="">Seleccione el servicio</option>
-                    <option>Car Wash & Detailling</option>
-                    <option>Restauración de Silvines</option>
-                    <option>Restauración de Pintura</option>
-                    <option>Limpieza de Tapicería</option>
-                    <option>Lavado de Motor y Chasis</option>
-                    <option>Mecánica Express</option>
-                    <option>Cambio de Aceite</option>
-                    <option>Diagnóstico A/C</option>
-                    <option>Enderezado y Pintura</option>
-                    <option>Sistema de Frenos</option>
-                </select>
-            </div>
-
-            <button type="submit">
-                <i class="fa-brands fa-whatsapp"></i>
-                Enviar cotización
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
             </button>
 
-        </form>
-
-    </div>
-</section>
-
-
-</section>
-
-<footer class="footer">
-    <div class="footer-container">
-
-        <div class="footer-col services-col">
-            <h3>Servicios automotrices</h3>
-            <ul class="services-grid">
-                <li>Car Wash & Detailling</li>
-                <li>Restauración de Silvines</li>
-                <li>Restauración de Pintura</li>
-                <li>Limpieza de Tapicería</li>
-                <li>Lavado de Motor y Chasis</li>
-                <li>Mecánica Express</li>
-                <li>Cambio de Aceite</li>
-                <li>Diagnóstico A/C</li>
-                <li>Enderezado y Pintura</li>
-                <li>Sistema de Frenos</li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h3>Secciones</h3>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#top">Inicio</a></li>
-                <li><a href="#nuestro-trabajo">Nuestro trabajo</a></li>
-                <li><a href="#cotizacion">Cotización</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="https://maps.app.goo.gl/5bqVa5Pn5cChx7QbA">Ubicación</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#catalogo">Vehículos</a></li>
+                <li><a href="https://maps.google.com/?q=13.962472,-89.567611" target="_blank">Ubicación</a></li>
+                <li><a href="#cotizacion" class="btn-nav-cta">Cotizar Ahora</a></li>
             </ul>
         </div>
+    </nav>
 
-        <div class="footer-col">
-            <h3>Contáctanos</h3>
-            <ul class="footer-contact">
-                <li><i class="fa-solid fa-phone"></i> +503 7046 7387</li>
-                <li><i class="fa-solid fa-envelope"></i> blcarcenter@gmail.com </li>
-                <li>
-                    <i class="fa-solid fa-clock"></i>
-                    Lunes-Viernes: 08:00 am - 06:00 pm<br>
-                </li>
-                <li>
-                    <i class="fa-solid fa-clock"></i>
-                    Sabado-Domingo: 08:00 am - 04:00 pm<br>
-                </li>
-            </ul>
-            <div class="footer-socials">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Taller Especializado & Autolote</span>
+            <h1>Precisión en cada detalle, confianza en cada kilómetro.</h1>
+            <p>Especialistas en enderezado, pintura automotriz de fábrica, restauración estética e importación directa de vehículos seleccionados.</p>
+            <div class="hero-buttons">
+                <a href="#cotizacion" class="btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar Presupuesto
+                </a>
+                <a href="#catalogo" class="btn-secondary">
+                    Ver Vehículos Disponibles
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE SERVICIOS ESPECIALIZADOS -->
+    <section id="servicios" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Nuestras Especialidades</span>
+                <h2>Servicios Automotrices</h2>
+                <p>Nos enfocamos en devolverle el acabado original a tu vehículo y ayudarte a conseguir tu próximo auto.</p>
+            </div>
+
+            <div class="services-grid-cards">
+                <!-- Servicio 1 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="imagenes/eyp22.jpg" alt="Enderezado y Pintura">
+                    </div>
+                    <div class="service-info">
+                        <h3>Enderezado y Pintura</h3>
+                        <p>Reparación estructural de carrocería, igualación exacta de color computarizada y acabado en cabina.</p>
+                        <a href="#cotizacion" onclick="seleccionarServicio('Enderezado y Pintura')" class="service-link">
+                            Cotizar este servicio <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="imagenes/eypPrueba.jpg" alt="Restauración de Pintura">
+                    </div>
+                    <div class="service-info">
+                        <h3>Restauración de Pintura</h3>
+                        <p>Corrección de barniz, eliminación de rayones profundos, pulido profesional y sellado de brillo espejo.</p>
+                        <a href="#cotizacion" onclick="seleccionarServicio('Restauración de Pintura')" class="service-link">
+                            Cotizar este servicio <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="imagenes/b13d6274-74de-46c9-ac07-f986531d7ea4.png" alt="Importación y Venta de Vehículos">
+                    </div>
+                    <div class="service-info">
+                        <h3>Importación y Venta</h3>
+                        <p>Traemos tu vehículo bajo pedido desde EE.UU. con historial verificado, o elige de nuestro inventario listo para entrega.</p>
+                        <a href="#catalogo" class="service-link">
+                            Explorar catálogo <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CATÁLOGO DE VEHÍCULOS -->
+    <section id="catalogo" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Inventario e Importación</span>
+                <h2>Vehículos en Venta</h2>
+                <p>Unidades inspeccionadas mecánicamente y con estética impecable.</p>
+            </div>
+
+            <div class="cars-grid">
+                <!-- Auto Ejemplo 1 -->
+                <div class="car-card">
+                    <div class="car-badge">Disponible</div>
+                    <img src="imagenes/Used-2018-Nissan-Rogue-SV-Midnight-Edition-1571249532.jpg" alt="Vehículo en venta">
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Nissan Rouge </h3>
+                            <span class="car-year">2018</span>
+                        </div>
+                        <ul class="car-specs">
+                            <li><i class="fa-solid fa-gauge"></i> 46,000 millas</li>
+                            <li><i class="fa-solid fa-gears"></i> Automático</li>
+                            <li><i class="fa-solid fa-car"></i> 4x4</li>
+                        </ul>
+                        <div class="car-footer">
+                            <span class="car-price">$9,500</span>
+                            <button onclick="cotizarVehiculo('Nissan Rouge 2018')" class="btn-car">
+                                <i class="fa-brands fa-whatsapp"></i> Consultar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="car-card">
+                    <div class="car-badge">Disponible</div>
+                    <img src="imagenes/2021-Nissan-Kicks-S-Model-Left-728x400.avif" alt="Vehículo en venta">
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Nissan Kicks </h3>
+                            <span class="car-year">2021</span>
+                        </div>
+                        <ul class="car-specs">
+                            <li><i class="fa-solid fa-gauge"></i> 25,000 millas</li>
+                            <li><i class="fa-solid fa-gears"></i> Automático</li>
+                        </ul>
+                        <div class="car-footer">
+                            <span class="car-price">$12,500</span>
+                            <button onclick="cotizarVehiculo('Nissan Kicks 2021')" class="btn-car">
+                                <i class="fa-brands fa-whatsapp"></i> Consultar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="car-card">
+                    <div class="car-badge">Disponible</div>
+                    <img src="imagenes/nissan350z.jpeg" alt="Vehículo en venta">
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Nissan 350Z</h3>
+                            <span class="car-year">2004</span>
+                        </div>
+                        <ul class="car-specs">
+                            <li><i class="fa-solid fa-gauge"></i> 98,000 millas</li>
+                            <li><i class="fa-solid fa-gears"></i> Estandar</li>
+                        </ul>
+                        <div class="car-footer">
+                            <span class="car-price">$6,000</span>
+                            <button onclick="cotizarVehiculo('Nissan 350Z 2004')" class="btn-car">
+                                <i class="fa-brands fa-whatsapp"></i> Consultar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Auto Ejemplo 2 -->
+                <div class="car-card">
+                    <div class="car-badge badge-transit">En Tránsito</div>
+                    <img src="imagenes/eyp22.jpg" alt="Vehículo en importación">
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Importación Bajo Pedido</h3>
+                            <span class="car-year">2020 - 2024</span>
+                        </div>
+                        <ul class="car-specs">
+                            <li><i class="fa-solid fa-ship"></i> Subastas Copart / IAAI</li>
+                            <li><i class="fa-solid fa-shield-halved"></i> Carfax Verificado</li>
+                        </ul>
+                        <div class="car-footer">
+                            <span class="car-price">A tu medida</span>
+                            <button onclick="cotizarVehiculo('Importación de vehículo bajo pedido')" class="btn-car">
+                                <i class="fa-brands fa-whatsapp"></i> Cotizar Auto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN COTIZACIÓN -->
+    <section id="cotizacion" class="cotizacion">
+        <div class="cotizacion-overlay"></div>
+        <div class="cotizacion-box">
+            <div class="cotizacion-text">
+                <h2>Solicita tu cotización directa</h2>
+                <p>Completa tus datos y te atenderemos de inmediato vía WhatsApp para evaluar tu vehículo o ayudarte con tu importación.</p>
+                <ul class="benefits-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Presupuestos claros y sin compromiso</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Materiales automotrices de alta gama</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Asesoría completa en importación</li>
+                </ul>
+            </div>
+
+            <form class="cotizacion-form" id="cotizacionForm" onsubmit="enviarWhatsApp(event)">
+                <div class="form-row">
+                    <input type="text" id="nombre" placeholder="Nombre" maxlength="25" required>
+                    <input type="text" id="apellido" placeholder="Apellido" maxlength="25" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="telefono" placeholder="Teléfono (Ej. 70467387)" inputmode="numeric" required>
+                </div>
+                <div class="form-group">
+                    <select id="servicioSeleccionado" required>
+                        <option value="">¿En qué podemos ayudarte?</option>
+                        <option value="Enderezado y Pintura">Enderezado y Pintura</option>
+                        <option value="Restauración de Pintura">Restauración de Pintura</option>
+                        <option value="Compra de Vehículo en Inventario">Compra de Vehículo en Inventario</option>
+                        <option value="Importación de Vehículo bajo pedido">Importación de Vehículo bajo pedido</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar solicitud por WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER CON LOGO INTEGRADO -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="#top" class="logo footer-logo">
+                    <img src="imagenes/fpblc.jpg" alt="BL Car Center Logo">
+                    <div class="logo-text">BL <span>CAR CENTER</span></div>
+                </a>
+                <p class="footer-desc">Excelencia en enderezado, pintura automotriz e importación de vehículos en El Salvador.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/bl_carcentersv/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/50370467387" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Especialidades</h3>
+                <ul>
+                    <li><a href="#servicios">Enderezado y Pintura</a></li>
+                    <li><a href="#servicios">Restauración de Pintura</a></li>
+                    <li><a href="#catalogo">Venta de Vehículos</a></li>
+                    <li><a href="#catalogo">Importación Directa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contacto y Horarios</h3>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-phone"></i> +503 7046 7387</li>
+                    <li><i class="fa-solid fa-envelope"></i> blcarcenter@gmail.com</li>
+                    <li><i class="fa-solid fa-clock"></i> Lun - Vie: 8:00 am - 6:00 pm</li>
+                    <li><i class="fa-solid fa-clock"></i> Sáb - Dom: 8:00 am - 4:00 pm</li>
+                </ul>
             </div>
         </div>
 
-    </div>
+        <div class="footer-bottom">
+            <p>© 2026 BL Car Center. Todos los derechos reservados. Diseñado por Aurelios.sv</p>
+        </div>
+    </footer>
 
-    <div class="footer-bottom">
-        <p>© 2025 BL Car Center. Todos los derechos reservados. Sitio web diseñado por Aurelios.sv</p>
-    </div>
-</footer>
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-
-<!-- JAVASCRIPT -->
-<script>
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const megaBtn = document.querySelector('.mega-btn');
-    const megaMenu = document.querySelector('.mega-menu');
-
-    // Menú hamburguesa
-    toggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Acordeón Servicios (solo móvil)
-    megaBtn.addEventListener('click', () => {
-        megaMenu.classList.toggle('active');
-    });
-
-    // Cerrar menú al hacer click en un enlace (mobile UX)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-
-        link.addEventListener('click', (e) => {
-
-            // Si es el botón Ubicación NO cerrar menú
-            if(link.closest(".mapa-menu")){
-                e.preventDefault();
-                return;
-            }
-
-            navLinks.classList.remove('active');
-            megaMenu.classList.remove('active');
-
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
 
-    });
-</script>
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
 
-<script>
-    const form = document.getElementById("cotizacionForm");
-
-    // Resetear formulario al recargar la página
-    window.addEventListener("load", () => {
-        form.reset();
-    });
-
-    // Solo letras en nombre y apellido (en tiempo real)
-    function soloLetras(input) {
-        input.value = input.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, "");
-    }
-
-    // Solo números en teléfono (en tiempo real)
-    function soloNumeros(input) {
-        input.value = input.value.replace(/[^0-9]/g, "");
-    }
-
-    document.getElementById("nombre").addEventListener("input", function () {
-        soloLetras(this);
-    });
-
-    document.getElementById("apellido").addEventListener("input", function () {
-        soloLetras(this);
-    });
-
-    document.getElementById("telefono").addEventListener("input", function () {
-        soloNumeros(this);
-    });
-
-    function enviarWhatsApp(event) {
-        event.preventDefault();
-
-        const nombre = document.getElementById("nombre").value.trim();
-        const apellido = document.getElementById("apellido").value.trim();
-        const telefono = document.getElementById("telefono").value.trim();
-        const servicio = document.getElementById("servicioSeleccionado").value;
-        if (!nombre || !apellido || !telefono || !servicio) {
-            alert("Por favor complete todos los campos.");
-            return;
+        function seleccionarServicio(servicio) {
+            document.getElementById('servicioSeleccionado').value = servicio;
         }
 
-        const mensaje = `Hola, mi nombre es ${nombre} ${apellido}.
-    Me gustaría cotizar el servicio de: ${servicio}.`;
+        function cotizarVehiculo(vehiculo) {
+            const mensaje = `Hola BL Car Center, me interesa recibir más información sobre: ${vehiculo}.`;
+            window.open(`https://wa.me/50370467387?text=${encodeURIComponent(mensaje)}`, "_blank");
+        }
 
-        const telefonoEmpresa = "50370467387"; // Numero de la empresa con código de país
-        const url = `https://wa.me/${telefonoEmpresa}?text=${encodeURIComponent(mensaje)}`;
+        document.getElementById("nombre").addEventListener("input", function () {
+            this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, "");
+        });
+        document.getElementById("apellido").addEventListener("input", function () {
+            this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, "");
+        });
+        document.getElementById("telefono").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
 
-        window.open(url, "_blank");
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+            const nombre = document.getElementById("nombre").value.trim();
+            const apellido = document.getElementById("apellido").value.trim();
+            const telefono = document.getElementById("telefono").value.trim();
+            const servicio = document.getElementById("servicioSeleccionado").value;
 
-        // Reset después de enviar
-        form.reset();
-    }
-</script>
-
-
-<script>
-    function mostrarServicio(nombreServicio) {
-
-        /* ========= HEADER ========= */
-        const hero = document.querySelector(".hero");
-        const heroTitulo = document.getElementById("hero-titulo");
-        const heroDescripcion = document.getElementById("hero-descripcion");
-
-        /* ========= SECCIÓN TRABAJO ========= */
-        const tituloTrabajo = document.getElementById("trabajo-titulo");
-        const galeriaTrabajo = document.getElementById("trabajo-galeria");
-
-        // CONFIGURACIÓN DE SERVICIOS
-        const servicios = {
-            "Car Wash & Detailling": {
-                descripcion: "Lavado profesional para tu vehiculo por que sabemos lo que significa para ti.",
-                fondo: "imagenes/fondoServicioCARYDET.png"
-            },
-            "Restauración de Silvines": {
-                descripcion: "Mejoramos la visibilidad de iluminacion y apariencia de tus faros por que tu seguridad nos importa.",
-                fondo: "imagenes/fondoSilvines.png"
-            },
-            "Restauración de Pintura": {
-                descripcion: "Corrección y restauración del brillo original de tu vehículo.",
-                fondo: "imagenes/fondoPintura.png"
-            },
-            "Limpieza de Tapicería": {
-                descripcion: "Limpieza profunda y desinfección interior.",
-                fondo: "imagenes/fondoTapiceria.png"
-            },
-            "Lavado de Motores y Chasis": {
-                descripcion: "Limpieza segura para motor y chasis.",
-                fondo: "imagenes/fondoMotor.png"
-            },
-            "Mecánica Express": {
-                descripcion: "Servicios rápidos y confiables para tu vehículo.",
-                fondo: "imagenes/fondoMecanica.png"
-            },
-            "Cambio de Aceite": {
-                descripcion: "Aceites de calidad para mayor rendimiento del motor.",
-                fondo: "imagenes/fondoAceite.png"
-            },
-            "Diagnóstico A/C": {
-                descripcion: "Revisión profesional del sistema de aire acondicionado.",
-                fondo: "imagenes/fondoAC.png"
-            },
-            "Enderezado y Pintura": {
-                descripcion: "Reparación estructural y pintura profesional.",
-                fondo: "imagenes/fondoEnderezado.png"
-            },
-            "Sistema de Frenos": {
-                descripcion: "Mantenimiento completo para tu seguridad.",
-                fondo: "imagenes/fondoFrenos.png"
-            }
-        };
-
-        const servicio = servicios[nombreServicio];
-
-        /* ========= ACTUALIZAR HEADER ========= */
-        heroTitulo.textContent = nombreServicio;
-        heroDescripcion.textContent = servicio.descripcion;
-        hero.style.backgroundImage = `url('${servicio.fondo}')`;
-
-        /* ========= ACTUALIZAR SECCIÓN TRABAJO ========= */
-        tituloTrabajo.textContent = nombreServicio;
-        galeriaTrabajo.innerHTML = ""; // Plantilla en blanco por ahora
-
-        /* ========= SCROLL ========= */
-        document.getElementById("nuestro-trabajo")
-            .scrollIntoView({ behavior: "smooth" });
-    }
-</script>
-
-
-<script>
-    window.addEventListener("DOMContentLoaded", () => {
-
-        const params = new URLSearchParams(window.location.search);
-        const servicioKey = params.get("servicio");
-
-        if (!servicioKey) return;
-        document.getElementById("btn-inicio").style.display = "inline-block";
-
-
-        const hero = document.querySelector(".hero");
-        const heroTitulo = document.getElementById("hero-titulo");
-        const heroDescripcion = document.getElementById("hero-descripcion");
-
-        const tituloTrabajo = document.getElementById("trabajo-titulo");
-        const galeriaTrabajo = document.getElementById("trabajo-galeria");
-
-        const servicios = {
-            carwash: {
-                nombre: "Car Wash & Detailling",
-                descripcion: "Lavado profesional para tu vehiculo por que sabemos lo que significa para ti.",
-                fondo: "imagenes/fondoServicioCARYDET.png"
-            },
-            silvines: {
-                nombre: "Restauración de Silvines",
-                descripcion: "Mejoramos la visibilidad de iluminacion y apariencia de tus faros por que tu seguridad nos importa.",
-                fondo: "imagenes/fondoSilvines.png"
-            },
-            pintura: {
-                nombre: "Restauración de Pintura",
-                descripcion: "Corrección y restauración del brillo original del vehículo.",
-                fondo: "imagenes/fondoPintura.png"
-            },
-            tapiceria: {
-                nombre: "Limpieza de Tapicería",
-                descripcion: "Limpieza profunda y desinfección interior.",
-                fondo: "imagenes/fondoTapiceria.png"
-            },
-            motor: {
-                nombre: "Lavado de Motores y Chasis",
-                descripcion: "Limpieza segura para motor y chasis.",
-                fondo: "imagenes/fondoMotor.png"
-            },
-            mecanica: {
-                nombre: "Mecánica Express",
-                descripcion: "Servicios rápidos y confiables.",
-                fondo: "imagenes/fondoMecanica.png"
-            },
-            aceite: {
-                nombre: "Cambio de Aceite",
-                descripcion: "Aceites de calidad para el mejor rendimiento.",
-                fondo: "imagenes/fondoAceite.png"
-            },
-            ac: {
-                nombre: "Diagnóstico A/C",
-                descripcion: "Revisión profesional del sistema de aire acondicionado.",
-                fondo: "imagenes/fondoAC.png"
-            },
-            enderezado: {
-                nombre: "Enderezado y Pintura",
-                descripcion: "Reparación estructural y pintura profesional.",
-                fondo: "imagenes/fondoEnderezado.png"
-            },
-            frenos: {
-                nombre: "Sistema de Frenos",
-                descripcion: "Mantenimiento completo para tu seguridad.",
-                fondo: "imagenes/fondoFrenos.png"
-            }
-        };
-
-        const servicio = servicios[servicioKey];
-        if (!servicio) return;
-
-
-        // HEADER
-        heroTitulo.textContent = servicio.nombre;
-        heroDescripcion.textContent = servicio.descripcion;
-        hero.style.backgroundImage = `url('${servicio.fondo}')`;
-
-        // SECCIÓN NUESTRO TRABAJO (PLANTILLA VACÍA)
-        tituloTrabajo.textContent = servicio.nombre;
-        galeriaTrabajo.innerHTML = "";
-
-    });
-</script>
-
-<script>
-    function volverInicio() {
-        window.location.href = window.location.pathname;
-    }
-</script>
+            const mensaje = `Hola BL Car Center, mi nombre es ${nombre} ${apellido} (Tel: ${telefono}). Me gustaría cotizar: ${servicio}.`;
+            window.open(`https://wa.me/50370467387?text=${encodeURIComponent(mensaje)}`, "_blank");
+            document.getElementById("cotizacionForm").reset();
+        }
+    </script>
 </body>
 </html>
